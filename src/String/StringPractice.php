@@ -1,27 +1,21 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: web_admin
- * Date: 15/05/14
- * Time: 16:49
- */
-
 namespace String;
 
-class StringPractice {
+class StringPractice
+{
 
     /** @var string $string */
-    private $string ='';
+    private $string = '';
 
-    public function getString(){
+    public function getString()
+    {
         return $this->string;
     }
 
-    public function addString($val){
+    public function addString($val)
+    {
         $this->string .= $val;
     }
-
-
 
 
 }

@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: web_admin
- * Date: 15/05/14
- * Time: 16:53
- */
-
 namespace Test;
 
 use PHPUnit_Framework_TestCase;
