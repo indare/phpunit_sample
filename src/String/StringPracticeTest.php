@@ -45,11 +45,34 @@ class StringPracticeTest extends PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function addStringメソッドを2回呼ぶと順番通りの文字がかえってくる(){
+    public function addStringメソッドを2回呼ぶと順番通りの文字がかえってくる()
+    {
 
         $this->stringPractice->addString('hoge')->addString('fuga');
 
         self::assertEquals('hogefuga', $this->stringPractice->getString());
+
+    }
+
+    /**
+     * @test
+     */
+    public function hogeをクラスに渡してrevertStringメソッドを呼ぶと文字が逆になる()
+    {
+
+        $this->stringPractice->addString('hoge');
+        self::assertEquals('egoh', $this->stringPractice->revertString());
+
+    }
+
+    /**
+     * @test
+     */
+    public function hogefugaをクラスに渡してrevertStringメソッドを呼ぶと文字が逆になる()
+    {
+
+        $this->stringPractice->addString('hogefuga');
+        self::assertEquals('agufegoh', $this->stringPractice->revertString());
 
     }
 

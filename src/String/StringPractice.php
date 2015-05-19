@@ -19,8 +19,19 @@ class StringPractice
     public function addString($val)
     {
         $this->string .= $val;
+
         return $this;
+
     }
 
+    /**
+     * @return string
+     */
+    public function revertString()
+    {
+
+        return strrev($this->string);
+
+    }
 
 }
