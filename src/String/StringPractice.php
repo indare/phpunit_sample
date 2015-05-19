@@ -12,9 +12,14 @@ class StringPractice
         return $this->string;
     }
 
+    /**
+     * @param string $val
+     * @return $this
+     */
     public function addString($val)
     {
         $this->string .= $val;
+        return $this;
     }
 
 

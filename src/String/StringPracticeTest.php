@@ -38,10 +38,19 @@ class StringPracticeTest extends PHPUnit_Framework_TestCase
      */
     public function addStringメソッドを２回呼ぶと文字が倍になる()
     {
-        $this->stringPractice->addString('hoge');
-        $this->stringPractice->addString('hoge');
+        $this->stringPractice->addString('hoge')->addString('hoge');
         self::assertEquals('hogehoge', $this->stringPractice->getString());
     }
 
+    /**
+     * @test
+     */
+    public function addStringメソッドを2回呼ぶと順番通りの文字がかえってくる(){
+
+        $this->stringPractice->addString('hoge')->addString('fuga');
+
+        self::assertEquals('hogefuga', $this->stringPractice->getString());
+
+    }
 
 }
