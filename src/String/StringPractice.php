@@ -18,7 +18,7 @@ class StringPractice
      */
     public function addString($val)
     {
-        $this->string .= $val;
+        $this->string .= '1' . $val;
 
         return $this;
 
