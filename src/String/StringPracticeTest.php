@@ -41,7 +41,7 @@ class StringPracticeTest extends PHPUnit_Framework_TestCase
         $this->stringPractice->addString('hoge');
         $this->stringPractice->addString('hoge');
         self::assertEquals('hogehoge', $this->stringPractice->getString());
-
     }
+
 
 }
