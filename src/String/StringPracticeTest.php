@@ -4,12 +4,19 @@ namespace Test;
 use PHPUnit_Framework_TestCase;
 use String\StringPractice;
 
+/**
+ * Class StringPracticeTest
+ * @package Test
+ */
 class StringPracticeTest extends PHPUnit_Framework_TestCase
 {
 
     /** @var StringPractice $stringPractice */
     private $stringPractice;
 
+    /**
+     * @setup
+     */
     public function setUp()
     {
         $this->stringPractice = new StringPractice();
@@ -47,11 +54,8 @@ class StringPracticeTest extends PHPUnit_Framework_TestCase
      */
     public function addStringメソッドを2回呼ぶと順番通りの文字がかえってくる()
     {
-
         $this->stringPractice->addString('hoge')->addString('fuga');
-
         self::assertEquals('hogefuga', $this->stringPractice->getString());
-
     }
 
     /**
@@ -59,10 +63,8 @@ class StringPracticeTest extends PHPUnit_Framework_TestCase
      */
     public function hogeをクラスに渡してrevertStringメソッドを呼ぶと文字が逆になる()
     {
-
         $this->stringPractice->addString('hoge');
         self::assertEquals('egoh', $this->stringPractice->revertString());
-
     }
 
     /**
@@ -70,10 +72,8 @@ class StringPracticeTest extends PHPUnit_Framework_TestCase
      */
     public function hogefugaをクラスに渡してrevertStringメソッドを呼ぶと文字が逆になる()
     {
-
         $this->stringPractice->addString('hogefuga');
         self::assertEquals('agufegoh', $this->stringPractice->revertString());
-
     }
 
 }

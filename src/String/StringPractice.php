@@ -1,12 +1,19 @@
 <?php
 namespace String;
 
+/**
+ * Class StringPractice
+ * @package String
+ */
 class StringPractice
 {
 
     /** @var string $string */
     private $string = '';
 
+    /**
+     * @return string
+     */
     public function getString()
     {
         return $this->string;
@@ -21,7 +28,6 @@ class StringPractice
         $this->string .= $val;
 
         return $this;
-
     }
 
     /**
@@ -29,9 +35,7 @@ class StringPractice
      */
     public function revertString()
     {
-
         return strrev($this->string);
-
     }
 
 }
